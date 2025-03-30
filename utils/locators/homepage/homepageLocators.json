@@ -14,6 +14,10 @@
             "terminos_condiciones": "//footer //div[contains(@class,'blk')] //a[text()='Términos y condiciones']",
             "privacidad": "//footer //div[contains(@class,'blk')] //a[text()='Privacidad']",
             "terminos_promociones": "//footer //div[contains(@class,'blk')] //a[text()='Términos de promociones']"
+        },
+        "redes":{
+            "facebook": "(//footer //div[contains(@class,'blk')] //li[contains(@class,'facebook')] //a)[1]",
+            "instagram": "(//footer //div[contains(@class,'blk')] //li[contains(@class,'instagram')] //a)[1]"
         }
     }
 }
