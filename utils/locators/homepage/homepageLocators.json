@@ -1,5 +1,13 @@
 {
-	"tabCloseBtns": "//ba']",
+    "header":{
+        "slideMenu":{
+            "openBtn": "//a[@id='btnMainMenuMobile']",
+            "closeBtn": "//span[@class='btnCerrar']"
+        }
+    },
+    "main":{
+        "newsletter":"(//div[contains(@class,'blkNewsletter')] //button)[1]"
+    },
     "footer":{
         "destacados":{
             "nosotros": "//footer //div[contains(@class,'blk')] //a[text()='Nosotros']",
