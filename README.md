@@ -66,11 +66,9 @@ npx playwright test -g "Verify campaign history at contact layout and its view"
 ```
 
 ## Notes/Workarounds for SDET
-- **Do not place returns within test.step, otherwise return is undefined**
 - In case a command/code line is working by doing debug with browser visible but not working in headless/headful by normal execution. Most likely is an issue of wait/load time and/or if it's a class update the page variable.
-- When using setdropdown by index option avoid the index 1, usually is --None--
+- **Avoid returns into test.step block**, they may go out as undefined. Instead declare a variable before test step, reload it within test step block and after test step block return the variable
 - In case you wanna use Test Recorder Plugin to verify some locator or anything else but you encounter issues. Execute the command below -suggested to select on Target the value 'Library' which is smoother-
--Avoid returns into test.step block, they may go out as undefined. Instead declare a variable before test step, reload it within test step block and after test step block return the variable
 ```
 npx playwright codegen --browser=chromium
 ```
