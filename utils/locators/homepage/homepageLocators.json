@@ -1,0 +1,12 @@
+{
+	"tabCloseBtns": "//ba']",
+	"footer":{
+		"nosotros": "//footer //div[contains(@class,'blk')] //a[text()='Nosotros']",
+        "como_comprar": "//footer //div[contains(@class,'blk')] //a[text()='Cómo comprar']",
+        "envios": "//footer //div[contains(@class,'blk')] //a[text()='Envíos']",
+        "como_realizar_cambio": "//footer //div[contains(@class,'blk')] //a[text()='Cómo realizar un cambio']",
+        "devoluciones": "//footer //div[contains(@class,'blk')] //a[text()='Devoluciones']",
+        "gestion_devolucion": "//footer //div[contains(@class,'blk')] //a[text()='Gestionar devolución']",
+        "preguntas_frecuentes": "//footer //div[contains(@class,'blk')] //a[text()='Preguntas frecuentes']"
+	}
+}
