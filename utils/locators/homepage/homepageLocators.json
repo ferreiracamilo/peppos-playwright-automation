@@ -1,6 +1,7 @@
 {
 	"tabCloseBtns": "//ba']",
-	"footer":{
+    "footer":{
+        "destacados":{
 		"nosotros": "//footer //div[contains(@class,'blk')] //a[text()='Nosotros']",
         "como_comprar": "//footer //div[contains(@class,'blk')] //a[text()='Cómo comprar']",
         "envios": "//footer //div[contains(@class,'blk')] //a[text()='Envíos']",
@@ -8,5 +9,11 @@
         "devoluciones": "//footer //div[contains(@class,'blk')] //a[text()='Devoluciones']",
         "gestion_devolucion": "//footer //div[contains(@class,'blk')] //a[text()='Gestionar devolución']",
         "preguntas_frecuentes": "//footer //div[contains(@class,'blk')] //a[text()='Preguntas frecuentes']"
-	}
+        },
+        "avisos_legales":{
+            "terminos_condiciones": "//footer //div[contains(@class,'blk')] //a[text()='Términos y condiciones']",
+            "privacidad": "//footer //div[contains(@class,'blk')] //a[text()='Privacidad']",
+            "terminos_promociones": "//footer //div[contains(@class,'blk')] //a[text()='Términos de promociones']"
+        }
+    }
 }
