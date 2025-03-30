@@ -1,13 +1,15 @@
 const{test, expect} = require('@playwright/test');
-const homePageLocators = require('../utils/locators/homepage/');
+const homePageLocators = require('../utils/locators/homepage/homepagelocators.json');
 
 class HomePage{
     #page;
-    #tabCloseBtns;
+    #slideMenuOpenBtn;
+    #slideMenuCloseBtn;
 
     constructor(page){
         this.#page = page;
-        this.#tabCloseBtns = page.locator(homePageLocators.tabCloseBtns);
+        this.#slideMenuOpenBtn = page.locator(homePageLocators.header.slideMenuOpenBtn);
+        this.#slideMenuCloseBtn = page.locator(homePageLocators.header.slideMenu.closeBtn);
     }
 
     async closeWelcomeModal(){
@@ -23,6 +25,14 @@ class HomePage{
             await this.#page.getByPlaceholder('Buscar productos...').fill('keyword');
             await this.#page.getByPlaceholder('Buscar productos...').press('Enter');
         });
+    }
+
+    async openSlideMenu(){
+        await this.#slideMenuOpenBtn.click();
+    }
+
+    async closeSlideMenu(){
+        await this.#slideMenuCloseBtn.click();
     }
 }
 module.exports = {HomePage};
