@@ -2,7 +2,13 @@
     "header":{
         "slideMenu":{
             "openBtn": "//a[@id='btnMainMenuMobile']",
-            "closeBtn": "//span[@class='btnCerrar']"
+            "closeBtn": "//span[@class='btnCerrar']",
+            "itemBtn": "//div[@id='mainMenuMobile'] //ul[@class='lst menu'] //li /a[text()='$itemName']",
+            "itemExpandBtn": "(//div[@id='mainMenuMobile'] //ul[@class='lst menu'] //li /a[text()='$itemName']  //following::span[@class='btnExpand'])[1]",
+            "submenu":{
+                "options": "//div[@id='mainMenuMobile'] //div[@class='subMenu'] //ul //li /a",
+                "itemBtn": "//div[@id='mainMenuMobile'] //div[@class='subMenu'] //ul //li /a[text()='$itemName']"
+            }
         }
     },
     "main":{
