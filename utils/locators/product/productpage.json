@@ -1,0 +1,9 @@
+{
+    "product":{
+        "name": "//div[@class='hdr'] /h1[@class='tit']",
+        "code": "//div[@class='hdr'] //div[@class='cod']",
+        "price": "(//div[@class='preciosWrapper'] //strong[@class='precio venta'] /span[@class='monto'])[1]",
+        "sizes": "//form[@id='frmComprarArticulo'] //li[@class='it' and @data-stock='disponible'] //input[@type='radio']"
+    },
+    "buyBtn": "//form[@id='frmComprarArticulo'] //button[id='btnComprar']"
+}
