@@ -1,0 +1,26 @@
+{
+    "productsPool":{
+        "products": "//div[@id='catalogoProductos'] /div[contains(@class,'it')]",
+        "productCards":{
+            "name": "//div[@id='catalogoProductos'] /div[contains(@class,'it')] //div[@class='info'] //a[@class='tit']",
+            "price": "//div[@id='catalogoProductos'] /div[contains(@class,'it')] //div[@class='info'] //div[@class='preciosWrapper'] //strong[@class='precio venta'] /span[@class='monto']",
+            "preview": "//div[@id='catalogoProductos'] /div[contains(@class,'it')] //div[@class='info'] //div[@class='mostrarPreviewBtn'] /button"
+        }
+    },
+    "productPreview":{
+        "container": "//div[@class='previewContainer']",
+        "price": "//div[@class='previewContainer'] //span[@class='monto']",
+        "title": "//div[@class='previewContainer'] //p[@class='tituloProducto']",
+        "availableSizes": "//div[@class='previewContainer'] //div[@class='tallesContainer'] //li[@data-stock='disponible']",
+        "buyBtn": "//div[@class='previewContainer'] //button[text()='Comprar']",
+        "buyError": "//div[@class='previewContainer'] //div[@class='alertMessage open']"
+    },
+    "filter":{
+        "displayFiltersBtn": "//div[@class='tools'] //span[@title='Filtrar productos']",
+        "filterContainer": {
+            "filters": "//div[@id='catalogoFiltros'] //input[@type='radio' and @name='categoria']",
+            "closeFilterBtn": "//div[@id='catalogoFiltros'] //span[contains(@class,'btnCerrarFiltros')]",
+            "applyFilterBtn": "//div[@id='catalogoFiltros'] //span[contains(@class,'btnMostrarProductos')]"
+        }
+    }
+}
