@@ -3,6 +3,7 @@
         "qtyContainer": "//div[@id='central' and @data-catalogo='on']"
     },
     "productsPool":{
+        "qtyResult": "//div[@class='tools'] //div[@class='tot']",
         "products": "//div[@id='catalogoProductos'] /div[contains(@class,'it')]",
         "productCards":{
             "name": "//div[@id='catalogoProductos'] /div[contains(@class,'it')] //div[@class='info'] //a[@class='tit']",
