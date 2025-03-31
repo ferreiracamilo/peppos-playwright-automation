@@ -106,3 +106,30 @@ test('Extract and verify prices are sorted from highest to lowest from Peppos ca
     // Verify the extracted prices are in descending order
     expect(originalPrices).toEqual(sortedPrices);
 });
+
+test.describe('Newsletter registration API validation', () => {
+    const url = 'https://www.peppos.com.uy/ajax?service=registro-newsletter';
+    const invalidEmails = ['esteban', 'esteban@esteban', 'esteban.com'];
+    const invalidBodyTemplate = (email) => `email=${email}&nombre=&apellido=&bots=no`;
+
+    for (const email of invalidEmails) {
+        test(`Verify invalid email response for: ${email}`, async ({ request }) => {
+            // Send POST request with invalid email
+            const response = await request.post(url, {
+                headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                body: invalidBodyTemplate(email),
+            });
+
+            // Verify response status is 200
+            expect(response.status()).toBe(200);
+
+            // Obtain response body text
+            const responseBody = await response.text();
+
+            // Ensure the response contains the expected error message
+            expect(responseBody).toContain('No es posible realizar el registro en este momento.');
+        });
+    }
+});
+
+
