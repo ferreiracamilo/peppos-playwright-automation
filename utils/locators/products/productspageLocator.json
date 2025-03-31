@@ -1,6 +1,7 @@
 {
     "nonResults":{
-        "qtyContainer": "//div[@id='central' and @data-catalogo='on']"
+        "qtyContainer": "//div[@id='central' and @data-catalogo='on']",
+        "reminder": "data-total"
     },
     "productsPool":{
         "qtyResult": "//div[@class='tools'] //div[@class='tot']",
