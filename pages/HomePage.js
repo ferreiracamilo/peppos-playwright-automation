@@ -16,10 +16,12 @@ class HomePage{
      * Closes the welcome modal if it is visible.
     */
     async closeWelcomeModal(){
-        await this.#page.waitForTimeout(4000);
-        if(this.#page.getByRole('button', { name: 'Thank U, next!' }).isVisible()){
-            await this.#page.getByRole('button', { name: 'Thank U, next!' }).click();
-        }
+        await test.step(`Close welcome modal if applies`, async () => {
+            await this.#page.waitForTimeout(4000);
+            if(this.#page.getByRole('button', { name: 'Thank U, next!' }).isVisible()){
+                await this.#page.getByRole('button', { name: 'Thank U, next!' }).click();
+            }
+        });
     }
 
     /**
@@ -38,14 +40,18 @@ class HomePage{
      * Opens the slide menu.
     */
     async openSlideMenu(){
-        await this.#slideMenuOpenBtn.click();
+        await test.step(`Open slide menu`, async () => {
+            await this.#slideMenuOpenBtn.click();
+        });
     }
 
     /**
      * Closes the slide menu.
     */
     async closeSlideMenu(){
-        await this.#slideMenuCloseBtn.click();
+        await test.step(`Close slide menu`, async () => {
+            await this.#slideMenuCloseBtn.click();
+        });
     }
 
     /**
