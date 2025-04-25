@@ -1,15 +1,19 @@
 const{test, expect} = require('@playwright/test');
+const {HomePage} = require('./HomePage');
 const {ProductPage} = require('./ProductPage');
 const {ProductsPage} = require('./ProductsPage');
-const {HomePage} = require('./HomePage');
 
 class POManager{
     #page;
-    //#caseRecordPage;
+    #homePage;
+    #productPage;
+    #productsPage;
 
     constructor(page){
         this.#page = page;
-        //this.#caseRecordPage = new CaseRecordPage(page);
+        this.#homePage = new HomePage(page);
+        this.#productPage = new ProductPage(page);
+        this.#productsPage = new ProductsPage(page);
     }
 
     /**
@@ -17,7 +21,7 @@ class POManager{
      * @returns {HomePage} The HomePage record page object.
      */
     getHomePage(){
-        return new HomePage(this.#page);
+        return this.#homePage;
     }
 
     /**
@@ -25,7 +29,7 @@ class POManager{
      * @returns {ProductPage} The ProductPage record page object.
      */
     getProductPage(){
-        return new ProductPage(this.#page);
+        return this.#productPage;
     }
 
     /**
@@ -33,7 +37,7 @@ class POManager{
      * @returns {ProductsPage} The ProductsPage record page object.
      */
     getProductsPage(){
-        return new ProductsPage(this.#page);
+        return this.#productsPage;
     }
 }
 module.exports = {POManager};
